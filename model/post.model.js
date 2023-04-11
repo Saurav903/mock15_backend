@@ -4,7 +4,7 @@ const postSchema = mongoose.Schema({
     email:String,
     destination:String,
     travellers:String,
-    budgetPerPerson:String
+    budgetPerPerson:Number
 },{
     versionKey:false
 });

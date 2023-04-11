@@ -34,7 +34,7 @@ app.get("/retrive",async(req,res)=>{
     let sort = {};
     if(sortBy){
         const parts = sortBy.split(":");
-        sort[parts[0]]= parts[1] === "desc" ? 1:-1;
+        sort[parts[0]]= parts[1] === "desc" ? -1:1;
     }
     const usersData = await PostModel.find(query).sort(sort);
     res.send(usersData);
